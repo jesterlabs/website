@@ -1,0 +1,56 @@
+body {
+	background-color: #FDB;
+	color: #636;
+	font-family: 'Courier Prime Bold', monospace;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	padding: 20px;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo a {
+	text-decoration: none;
+	color: #636;
+	font-size: 20px;
+}
+
+.navigation a {
+	text-decoration: none;
+	color: #636;
+	margin-left: 10px;
+}
+
+.navigation img {
+	width: 20px;
+	height: 20px;
+}
+
+.container {
+	display: flex;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.left-side {
+	width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.right-side {
+	width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
