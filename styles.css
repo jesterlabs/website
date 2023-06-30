@@ -4,6 +4,12 @@ body {
 	font-family: 'Courier Prime Bold', monospace;
 	margin: 0;
 	padding: 0;
+	/* font-family: 'Grenette'; */
+	font-weight: 400;
+	/* font-size: 4px; */
+	line-height: 58px;
+	letter-spacing: -0.02em;
+	width: 100%;
 }
 
 header {
@@ -53,4 +59,37 @@ nav {
     margin-left: auto;
     margin-right: auto;
 }
+
+.co-founder-container {
+	display: flex;
+	justify-content: center;
+	/* font-weight: 400; */
+	font-size: 25px;
+  }
+  
+  .co-founder {
+	text-align: center;
+	margin: 10px;
+  }
+  
+  .co-founder img {
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+  }
+  
+  .co-founder h3 {
+	margin-top: 10px;
+  }
+  
+  .co-founder p {
+	margin-top: 5px;
+  }
+
+  .people_links img {
+	width: 40px;
+	height: 40px;
+  }
+  
+
 
