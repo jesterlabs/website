@@ -1,189 +1,203 @@
 body {
-	background-color: #FDB;
-	color: #636;
-	font-family: 'Courier Prime Bold', monospace;
-	margin: 0;
-	padding: 0;
-	font-weight: 400;
-	line-height: 58px;
-	letter-spacing: -0.02em;
-	width: 100%;
+    background-color: #FDB;
+    color: #636;
+    font-family: 'Courier Prime Bold', monospace;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    line-height: 58px;
+    letter-spacing: -0.02em;
+    width: 100%;
+}
+
+header {
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo a, .navigation a, .navigation img {
+    text-decoration: none;
+    color: #636;
+    margin: 10px 5px;
+}
+
+.navigation img {
+    width: 20px;
+    height: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.left-side, .right-side {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 main {
-    min-height: 80vh; /* 100% of the viewport height */
+	min-height: 90vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative; /* Add this if not present */
+    z-index: 2; /* Ensures main content overlaps the slanted pseudo-element */
+}
+
+.contact-section {
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-header {
-	padding: 20px;
-}
-
-nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap;
-}
-
-.logo a {
-	text-decoration: none;
-	color: #636;
-	font-size: 20px;
-}
-
-.navigation a, .navigation img {
-	text-decoration: none;
-	color: #636;
-	margin: 10px 5px;
-	flex-wrap: wrap;
-}
-
-.navigation img {
-	width: 20px;
-	height: 20px;
-}
-
-.container {
-	display: flex;
-	flex-direction: column;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 20px;
-}
-
-.left-side, .right-side {
-	width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .co-founder-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	font-size: 25px;
+    display: flex;
+    justify-content: space-evenly; /* Adjust for symmetrical spacing */
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap; /* Allows for wrapping on smaller screens */
+    margin: 20px 0;
 }
 
 .co-founder {
-	text-align: center;
-	margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 80px;
 }
 
 .co-founder img {
-	border-radius: 50%;
-	width: 100px;
-	height: 100px;
+    border-radius: 50%;
+    width: 120px; /* Adjusted for a balanced look */
+    height: 120px;
+    margin-bottom: 10px;
 }
 
-.co-founder h3 {
-	margin-top: 10px;
+.people_links {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Provides spacing between icons */
 }
 
-.co-founder p {
-	margin-top: 5px;
+.people_links img.icon { /* Increased specificity */
+    width: 20px; /* Further reduction for a better fit */
+    height: 20px;
+    margin: 0; /* Resets any default margin */
 }
 
-.people_links img {
-	width: 40px;
-	height: 40px;
-}
+
 
 .tagline {
-	font-size: 18px;
+    font-size: 18px;
 }
 
+/* Adjustments for larger screens */
 @media (min-width: 768px) {
-	.navigation {
-		flex-wrap: nowrap;
-	}
+    .container {
+        flex-direction: row;
+    }
 
-	.container {
-		flex-direction: row;
-	}
+    .left-side, .right-side {
+        width: 50%;
+    }
 
-	.left-side, .right-side {
-		width: 50%;
-	}
+    .co-founder-container {
+        flex-direction: row;
+    }
 
-	.co-founder-container {
-		flex-direction: row;
-	}
+    .co-founder img {
+        width: 200px;
+        height: 200px;
+    }
 
-	.co-founder img {
-		width: 200px;
-		height: 200px;
-	}
-
-	.tagline {
-		font-size: 20px;
-	}
+    .tagline {
+        font-size: 20px;
+    }
 }
 
 /* Hamburger Menu Styles */
 .hamburger {
-	display: none;
-	cursor: pointer;
-  }
-  
-  .hamburger div {
-	width: 25px;
-	height: 3px;
-	background-color: #636;
-	margin: 5px;
-	transition: all 0.3s ease;
-  }
-  
-  /* Transform hamburger into cross */
-  .change .bar1 {
-	transform: rotate(-45deg) translate(-5px, 6px);
-  }
-  
-  .change .bar2 {opacity: 0;}
-  
-  .change .bar3 {
-	transform: rotate(45deg) translate(-5px, -6px);
-  }
-  
-  @media (max-width: 768px) {
-	.navigation {
-	  display: none;
-	  flex-direction: column;
-	  width: 100%;
-	}
-  
-	.navigation a {
-	  padding: 10px;
-	  text-align: center;
-	  display: block; /* Ensure links are displayed as block elements */
-	}
-  
-	.hamburger {
-	  display: block;
-	}
-  
-	.navigation.display {
-	  display: flex; /* This will show the navigation when toggled */
-	}
-  }
-
-  /* Contact Form Styles */
-  /* Contact Section Styles */
-  .contact-section {
-    background-color: #EAD; /* Slightly different to distinguish page break */
-    padding: 50px 0;
-    text-align: center;
-	min-height: 100vh; /* 100% of the viewport height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-	
+    display: none;
+    cursor: pointer;
 }
 
-/* Styling for the contact form inside the contact section */
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #636;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.change .bar1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navigation a {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .navigation.display {
+        display: flex;
+    }
+}
+
+/* Contact Section Styles */
+.contact-section::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -50px; /* Adjust as necessary */
+    height: 100px; /* Adjust the height to control the slant depth */
+    background: inherit; /* Inherits the background of the contact-section */
+    transform: skewY(-3deg); /* Adjust the angle for desired slant */
+    z-index: -1;
+}
+
+.contact-section {
+    position: relative; /* Required for the pseudo-element positioning */
+    background-color: #EAD;
+    padding: 50px 0;
+    text-align: center;
+    margin-top: -30px; /* Adjust to ensure seamless transition */
+}
+
 #contact-form {
     max-width: 600px;
     margin: 0 auto;
