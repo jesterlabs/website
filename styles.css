@@ -211,7 +211,7 @@ main {
 
 .contact-section {
     position: relative; /* Required for the pseudo-element positioning */
-    background-color: #EAD;
+    background-color: #BB77BB;
     padding: 50px 0;
     text-align: center;
     margin-top: -30px; /* Adjust to ensure seamless transition */
