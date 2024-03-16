@@ -4,9 +4,7 @@ body {
 	font-family: 'Courier Prime Bold', monospace;
 	margin: 0;
 	padding: 0;
-	/* font-family: 'Grenette'; */
 	font-weight: 400;
-	/* font-size: 4px; */
 	line-height: 58px;
 	letter-spacing: -0.02em;
 	width: 100%;
@@ -20,6 +18,7 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 .logo a {
@@ -28,10 +27,11 @@ nav {
 	font-size: 20px;
 }
 
-.navigation a {
+.navigation a, .navigation img {
 	text-decoration: none;
 	color: #636;
-	margin-left: 10px;
+	margin: 10px 5px;
+	flex-wrap: wrap;
 }
 
 .navigation img {
@@ -41,20 +41,14 @@ nav {
 
 .container {
 	display: flex;
+	flex-direction: column;
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 20px;
 }
 
-.left-side {
-	width: 50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.right-side {
-	width: 50%;
+.left-side, .right-side {
+	width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -62,38 +56,62 @@ nav {
 
 .co-founder-container {
 	display: flex;
-	justify-content: center;
-	/* font-weight: 400; */
+	flex-direction: column;
+	align-items: center;
 	font-size: 25px;
-  }
-  
-  .co-founder {
+}
+
+.co-founder {
 	text-align: center;
 	margin: 10px;
-  }
-  
-  .co-founder img {
-	border-radius: 50%;
-	width: 200px;
-	height: 200px;
-  }
-  
-  .co-founder h3 {
-	margin-top: 10px;
-  }
-  
-  .co-founder p {
-	margin-top: 5px;
-  }
+}
 
-  .people_links img {
+.co-founder img {
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+}
+
+.co-founder h3 {
+	margin-top: 10px;
+}
+
+.co-founder p {
+	margin-top: 5px;
+}
+
+.people_links img {
 	width: 40px;
 	height: 40px;
-  }
+}
 
-  .tagline {
-	font-size: 20px;
-  }
-  
+.tagline {
+	font-size: 18px;
+}
 
+@media (min-width: 768px) {
+	.navigation {
+		flex-wrap: nowrap;
+	}
 
+	.container {
+		flex-direction: row;
+	}
+
+	.left-side, .right-side {
+		width: 50%;
+	}
+
+	.co-founder-container {
+		flex-direction: row;
+	}
+
+	.co-founder img {
+		width: 200px;
+		height: 200px;
+	}
+
+	.tagline {
+		font-size: 20px;
+	}
+}
