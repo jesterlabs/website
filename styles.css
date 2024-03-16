@@ -223,16 +223,17 @@ main {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+	align-items: right;
 }
 
-#contact-form input, #contact-form textarea {
+/* #contact-form input, #contact-form textarea {
     margin-bottom: 15px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
+} */
 
-#contact-form button {
+/* #contact-form button {
     background-color: #636;
     color: #FFF;
     border: none;
@@ -240,11 +241,11 @@ main {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
+} */
 
-#contact-form button:hover {
+/* #contact-form button:hover {
     background-color: #555;
-}
+} */
 
 /* Project Section Styles */
 

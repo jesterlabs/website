@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Jester Labs - A multi-modal creative AI lab & agency</title>
+	<link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
@@ -20,6 +21,7 @@
 				<a href="projects.html"><b>Projects</b></a>
 				<a href="contact.html"><b>Contact</b></a>
 				<a href="https://github.com/jesterlabs"><img src="github_nex_square.svg" alt="GitHub Logo"></a>
+				</a>
 			</div>
 		</nav>
 	</header>
@@ -42,17 +44,23 @@
 		<div class="container">
 			<h2>Get in Touch</h2>
 			<form id="contact-form">
-				<input type="text" name="name" placeholder="Your Name" required>
-				<input type="email" name="email" placeholder="Your Email" required>
-				<textarea name="message" placeholder="Your Message" required></textarea>
-				<button type="submit">Submit</button>
+				<input type="text" name="name" placeholder="Your Name" required  class="nes-input">
+				<input type="email" name="email" placeholder="Your Email" required  class="nes-input">
+				<textarea id="textarea_field" class="nes-textarea" placeholder="Message"></textarea>
+				<button type="submit" class="nes-btn is-warning">Submit</button>
 			</form>
 		</div>
 	</section>
 	<section class="projects-section">
 		<div class="container">
-			<h2>Projects</h2>
+			<h2>Projects</h2>	  
 			<div class="project-panel">
+				<div class="nes-container is-rounded is-dark" style="background-color: #636">
+					<p>☕ vexpresso</p>
+				  </div>	
+				  <div class="nes-container is-rounded is-dark" style="background-color: #636">
+					<p>🚂 trainyard</p>
+				  </div>				  
 				<div class="project-box">
 					<a href="google.com" target="_blank">
 						<h2>Project 1</h2>
