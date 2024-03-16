@@ -1,7 +1,16 @@
+
+@font-face {
+	font-family: 'KongText';
+	src: url('kongtext.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+
 body {
     background-color: #FDB;
     color: #636;
-    font-family: 'Courier Prime Bold', monospace;
+	font-family: 'KongText', sans-serif;
     margin: 0;
     padding: 0;
     font-weight: 400;
@@ -17,19 +26,35 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Ensures vertical alignment */
     flex-wrap: wrap;
+    padding: 10px 20px; /* Added padding for better spacing */
 }
 
-.logo a, .navigation a, .navigation img {
+.logo a, .navigation a {
     text-decoration: none;
     color: #636;
-    margin: 10px 5px;
+    margin-right: 20px; /* Adjusted spacing */
+    font-size: 24px; /* Increased font size */
+    font-weight: bold; /* Makes the text slightly bolder */
 }
 
 .navigation img {
-    width: 20px;
-    height: 20px;
+    vertical-align: middle; /* Aligns the image with the text */
+    width: 30px; /* Adjusted for consistency */
+    height: 30px; /* Adjusted for consistency */
+    margin-left: auto; /* Pushes the logo to the far right */
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    font-size: 28px; /* Slightly larger for emphasis */
+}
+
+.logo a b {
+    display: inline-block;
+    font-size: inherit; /* Ensures emoji scales with text */
 }
 
 .container {
@@ -56,13 +81,6 @@ main {
 	align-items: center;
 	position: relative; /* Add this if not present */
     z-index: 2; /* Ensures main content overlaps the slanted pseudo-element */
-}
-
-.contact-section {
-    min-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .co-founder-container {
@@ -143,6 +161,7 @@ main {
     background-color: #636;
     margin: 5px;
     transition: all 0.3s ease;
+	image-rendering: pixelated;
 }
 
 .change .bar1 {
@@ -196,6 +215,7 @@ main {
     padding: 50px 0;
     text-align: center;
     margin-top: -30px; /* Adjust to ensure seamless transition */
+	min-height: 90vh;
 }
 
 #contact-form {
@@ -224,4 +244,28 @@ main {
 
 #contact-form button:hover {
     background-color: #555;
+}
+
+/* Project Section Styles */
+
+.projects-section::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -50px; /* Adjust as necessary */
+    height: 100px; /* Adjust the height to control the slant depth */
+    background: inherit; /* Inherits the background of the contact-section */
+    transform: skewY(3deg); /* Adjust the angle for desired slant */
+    z-index: 0;
+}
+
+.projects-section {
+    position: relative; /* Required for the pseudo-element positioning */
+    background-color: #FDB;
+    padding: 50px 0;
+    text-align: center;
+    margin-top: -30px; /* Adjust to ensure seamless transition */
+	min-height: 90vh;
 }
