@@ -74,7 +74,7 @@ nav {
 }
 
 main {
-	min-height: 90vh;
+	min-height: 85vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -196,18 +196,7 @@ main {
 }
 
 /* Contact Section Styles */
-.contact-section::before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: -50px; /* Adjust as necessary */
-    height: 100px; /* Adjust the height to control the slant depth */
-    background: inherit; /* Inherits the background of the contact-section */
-    transform: skewY(-3deg); /* Adjust the angle for desired slant */
-    z-index: -1;
-}
+
 
 .contact-section {
     position: relative; /* Required for the pseudo-element positioning */
@@ -216,7 +205,34 @@ main {
     text-align: center;
     margin-top: -30px; /* Adjust to ensure seamless transition */
 	min-height: 90vh;
+	overflow : hidden;
 }
+
+.pixelCon {
+	position: absolute;
+	width: 120%;  height: 120%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+  }
+  
+  .pixel {
+	background: #FFEEDD;
+	width: 10%;
+	padding-top: 10%;
+	float: left;
+	opacity: 0.0;
+	animation: blink 5s infinite;
+  }
+  
+  @keyframes blink {
+	0%    {opacity: 0.0;}
+	25%   {opacity: 0.0;}
+	50%   {opacity: 0.5;}
+	100%  {opacity: 0.0;}
+  }
+  
 
 #contact-form {
     max-width: 600px;
@@ -224,6 +240,7 @@ main {
     display: flex;
     flex-direction: column;
 	align-items: right;
+	z-index: 2;
 }
 
 /* #contact-form input, #contact-form textarea {
@@ -249,18 +266,6 @@ main {
 
 /* Project Section Styles */
 
-.projects-section::before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: -50px; /* Adjust as necessary */
-    height: 100px; /* Adjust the height to control the slant depth */
-    background: inherit; /* Inherits the background of the contact-section */
-    transform: skewY(3deg); /* Adjust the angle for desired slant */
-    z-index: 0;
-}
 
 .projects-section {
     position: relative; /* Required for the pseudo-element positioning */
@@ -268,5 +273,5 @@ main {
     padding: 50px 0;
     text-align: center;
     margin-top: -30px; /* Adjust to ensure seamless transition */
-	min-height: 90vh;
+	min-height: 100vh;
 }
