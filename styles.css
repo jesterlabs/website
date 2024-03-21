@@ -1,99 +1,317 @@
+
+@font-face {
+	font-family: 'KongText';
+	src: url('kongtext.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+
 body {
-	background-color: #FDB;
-	color: #636;
-	font-family: 'Courier Prime Bold', monospace;
-	margin: 0;
-	padding: 0;
-	/* font-family: 'Grenette'; */
-	font-weight: 400;
-	/* font-size: 4px; */
-	line-height: 58px;
-	letter-spacing: -0.02em;
-	width: 100%;
+    background-color: #FDB;
+    color: #636;
+	font-family: 'KongText', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    line-height: 58px;
+    letter-spacing: -0.02em;
+    width: 100%;
 }
 
 header {
-	padding: 20px;
+    padding: 20px;
 }
 
 nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensures vertical alignment */
+    flex-wrap: wrap;
+    padding: 10px 20px; /* Added padding for better spacing */
 }
 
-.logo a {
-	text-decoration: none;
-	color: #636;
-	font-size: 20px;
-}
-
-.navigation a {
-	text-decoration: none;
-	color: #636;
-	margin-left: 10px;
+.logo a, .navigation a {
+    text-decoration: none;
+    color: #636;
+    margin-right: 20px; /* Adjusted spacing */
+    font-size: 24px; /* Increased font size */
+    font-weight: bold; /* Makes the text slightly bolder */
 }
 
 .navigation img {
-	width: 20px;
-	height: 20px;
+    vertical-align: middle; /* Aligns the image with the text */
+    width: 30px; /* Adjusted for consistency */
+    height: 30px; /* Adjusted for consistency */
+    margin-left: auto; /* Pushes the logo to the far right */
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    font-size: 28px; /* Slightly larger for emphasis */
+}
+
+.logo a b {
+    display: inline-block;
+    font-size: inherit; /* Ensures emoji scales with text */
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+	z-index: 2;
+}
+
+.left-side, .right-side {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+main {
+	min-height: 85vh;
 	display: flex;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 20px;
-}
-
-.left-side {
-	width: 50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.right-side {
-	width: 50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative; /* Add this if not present */
+    z-index: 2; /* Ensures main content overlaps the slanted pseudo-element */
+	/* overflow: hidden; */
 }
 
 .co-founder-container {
-	display: flex;
-	justify-content: center;
-	/* font-weight: 400; */
-	font-size: 25px;
-  }
-  
-  .co-founder {
-	text-align: center;
-	margin: 10px;
-  }
-  
-  .co-founder img {
-	border-radius: 50%;
-	width: 200px;
-	height: 200px;
-  }
-  
-  .co-founder h3 {
-	margin-top: 10px;
-  }
-  
-  .co-founder p {
-	margin-top: 5px;
-  }
+    display: flex;
+    justify-content: space-evenly; /* Adjust for symmetrical spacing */
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap; /* Allows for wrapping on smaller screens */
+    margin: 20px 0;
+}
 
-  .people_links img {
-	width: 40px;
-	height: 40px;
-  }
+.co-founder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 80px;
+}
 
-  .tagline {
-	font-size: 20px;
+.co-founder img {
+    border-radius: 50%;
+    width: 120px; /* Adjusted for a balanced look */
+    height: 120px;
+    margin-bottom: 10px;
+}
+
+.people_links {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Provides spacing between icons */
+}
+
+.people_links img.icon { /* Increased specificity */
+    width: 20px; /* Further reduction for a better fit */
+    height: 20px;
+    margin: 0; /* Resets any default margin */
+}
+
+
+
+.tagline {
+    font-size: 18px;
+}
+
+/* Adjustments for larger screens */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+
+	.contact-container {
+		flex-direction: row;;
+	}
+
+    .left-side, .right-side {
+        width: 50%;
+    }
+
+    .co-founder-container {
+        flex-direction: row;
+    }
+
+    .co-founder img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .tagline {
+        font-size: 20px;
+    }
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #636;
+    margin: 5px;
+    transition: all 0.3s ease;
+	image-rendering: pixelated;
+}
+
+.change .bar1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navigation a {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .navigation.display {
+        display: flex;
+    }
+}
+
+/* Contact Section Styles */
+
+
+.projects-section {
+    position: relative; /* Required for the pseudo-element positioning */
+    background-color: #BB77BB;
+	color: #FDB;
+
+    padding: 50px 0;
+    text-align: center;
+    margin-top: -30px; /* Adjust to ensure seamless transition */
+	min-height: 90vh;
+	overflow : hidden;
+}
+
+.pixelCon {
+	position: absolute;
+	width: 100%;  height: 110%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+  }
+  
+  .pixel {
+	background: #BB77BB;
+	width: 10%;
+	padding-top: 10%;
+	float: left;
+	opacity: 0.0;
+	animation: blink 5s infinite;
+  }
+  
+  @keyframes blink {
+	0%    {opacity: 0.0;}
+	25%   {opacity: 0.0;}
+	50%   {opacity: 0.5;}
+	100%  {opacity: 0.0;}
   }
   
 
+#contact-form {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+	align-items: right;
+	z-index: 3;
+}
 
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+	z-index: 2;
+}
+
+/* #contact-form input, #contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+} */
+
+/* #contact-form button {
+    background-color: #636;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+} */
+
+/* #contact-form button:hover {
+    background-color: #555;
+} */
+
+/* Project Section Styles */
+
+
+.contact-section {
+    position: relative; /* Required for the pseudo-element positioning */
+    background-color: #FDB;
+    padding: 50px 0;
+    text-align: center;
+    margin-top: -30px; /* Adjust to ensure seamless transition */
+	min-height: 95vh;
+}
+
+ul.custom-icons {
+	list-style-type: none; /* Remove default bullets */
+	padding: 0;
+	margin-top: 15px; /* Adjusted for better spacing */
+	/* font size: 20px; */
+	font-size: 20px; /* Adjusted for better visibility */
+	/* text-align:left */
+	text-align: left;
+
+	list-style-position: inside;
+}
+ul.custom-icons li {
+	padding-left: 3em; /* Space for the icon */
+	position: relative;
+	left: 0;
+	/* text-align:left; */
+}
+ul.custom-icons li i {
+	position: absolute;
+	left: 0; /* Align icon to the left */
+	top: 0; /* Align icon to the top */
+}

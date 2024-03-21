@@ -1,3 +1,4 @@
+
 body {
 	background-color: #FDB;
 	color: #636;
@@ -14,6 +15,7 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 .logo a {
@@ -22,10 +24,11 @@ nav {
 	font-size: 20px;
 }
 
-.navigation a {
+.navigation a, .navigation img {
 	text-decoration: none;
 	color: #636;
-	margin-left: 10px;
+	margin: 10px 5px;
+	flex-wrap: wrap;
 }
 
 .navigation img {
@@ -35,17 +38,14 @@ nav {
 
 .container {
 	display: flex;
+	flex-direction: column;
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 20px;
 }
 
-.left-side {
-	width: 50%;
-}
-
-.right-side {
-	width: 50%;
+.left-side, .right-side {
+	width: 100%;
 }
 
 .project-panel {
@@ -63,15 +63,4 @@ nav {
 .project-box img {
 	width: 100%;
 	border-radius: 8px;
-	margin-bottom: 10px;
-}
-
-.project-box h2 {
-	font-size: 20px;
-	margin-bottom: 5px;
-}
-
-.project-box p {
-	font-size: 16px;
-	margin-bottom: 0;
-}
+	margin-bottom
