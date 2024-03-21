@@ -1,16 +1,15 @@
-
 @font-face {
-	font-family: 'KongText';
-	src: url('kongtext.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-  }
+    font-family: 'KongText';
+    src: url('kongtext.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 
 body {
     background-color: #FDB;
     color: #636;
-	font-family: 'KongText', sans-serif;
+    font-family: 'KongText', sans-serif;
     margin: 0;
     padding: 0;
     font-weight: 400;
@@ -26,35 +25,47 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Ensures vertical alignment */
+    align-items: center;
+    /* Ensures vertical alignment */
     flex-wrap: wrap;
-    padding: 10px 20px; /* Added padding for better spacing */
+    padding: 10px 20px;
+    /* Added padding for better spacing */
 }
 
-.logo a, .navigation a {
+.logo a,
+.navigation a {
     text-decoration: none;
     color: #636;
-    margin-right: 20px; /* Adjusted spacing */
-    font-size: 24px; /* Increased font size */
-    font-weight: bold; /* Makes the text slightly bolder */
+    margin-right: 20px;
+    /* Adjusted spacing */
+    font-size: 24px;
+    /* Increased font size */
+    font-weight: bold;
+    /* Makes the text slightly bolder */
 }
 
 .navigation img {
-    vertical-align: middle; /* Aligns the image with the text */
-    width: 30px; /* Adjusted for consistency */
-    height: 30px; /* Adjusted for consistency */
-    margin-left: auto; /* Pushes the logo to the far right */
+    vertical-align: middle;
+    /* Aligns the image with the text */
+    width: 30px;
+    /* Adjusted for consistency */
+    height: 30px;
+    /* Adjusted for consistency */
+    margin-left: auto;
+    /* Pushes the logo to the far right */
 }
 
 .logo a {
     display: flex;
     align-items: center;
-    font-size: 28px; /* Slightly larger for emphasis */
+    font-size: 28px;
+    /* Slightly larger for emphasis */
 }
 
 .logo a b {
     display: inline-block;
-    font-size: inherit; /* Ensures emoji scales with text */
+    font-size: inherit;
+    /* Ensures emoji scales with text */
 }
 
 .container {
@@ -63,10 +74,11 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-	z-index: 2;
+    z-index: 2;
 }
 
-.left-side, .right-side {
+.left-side,
+.right-side {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -75,22 +87,26 @@ nav {
 }
 
 main {
-	min-height: 85vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	position: relative; /* Add this if not present */
-    z-index: 2; /* Ensures main content overlaps the slanted pseudo-element */
-	/* overflow: hidden; */
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* Add this if not present */
+    z-index: 2;
+    /* Ensures main content overlaps the slanted pseudo-element */
+    /* overflow: hidden; */
 }
 
 .co-founder-container {
     display: flex;
-    justify-content: space-evenly; /* Adjust for symmetrical spacing */
+    justify-content: space-evenly;
+    /* Adjust for symmetrical spacing */
     align-items: center;
     text-align: center;
-    flex-wrap: wrap; /* Allows for wrapping on smaller screens */
+    flex-wrap: wrap;
+    /* Allows for wrapping on smaller screens */
     margin: 20px 0;
 }
 
@@ -104,7 +120,8 @@ main {
 
 .co-founder img {
     border-radius: 50%;
-    width: 120px; /* Adjusted for a balanced look */
+    width: 120px;
+    /* Adjusted for a balanced look */
     height: 120px;
     margin-bottom: 10px;
 }
@@ -112,13 +129,17 @@ main {
 .people_links {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Provides spacing between icons */
+    gap: 10px;
+    /* Provides spacing between icons */
 }
 
-.people_links img.icon { /* Increased specificity */
-    width: 20px; /* Further reduction for a better fit */
+.people_links img.icon {
+    /* Increased specificity */
+    width: 20px;
+    /* Further reduction for a better fit */
     height: 20px;
-    margin: 0; /* Resets any default margin */
+    margin: 0;
+    /* Resets any default margin */
 }
 
 
@@ -133,11 +154,13 @@ main {
         flex-direction: row;
     }
 
-	.contact-container {
-		flex-direction: row;;
-	}
+    .contact-container {
+        flex-direction: row;
+        ;
+    }
 
-    .left-side, .right-side {
+    .left-side,
+    .right-side {
         width: 50%;
     }
 
@@ -167,14 +190,16 @@ main {
     background-color: #636;
     margin: 5px;
     transition: all 0.3s ease;
-	image-rendering: pixelated;
+    image-rendering: pixelated;
 }
 
 .change .bar1 {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
 
-.change .bar2 {opacity: 0;}
+.change .bar2 {
+    opacity: 0;
+}
 
 .change .bar3 {
     transform: rotate(45deg) translate(-5px, -6px);
@@ -205,50 +230,64 @@ main {
 
 
 .projects-section {
-    position: relative; /* Required for the pseudo-element positioning */
+    position: relative;
+    /* Required for the pseudo-element positioning */
     background-color: #BB77BB;
-	color: #FDB;
+    color: #FDB;
 
     padding: 50px 0;
     text-align: center;
-    margin-top: -30px; /* Adjust to ensure seamless transition */
-	min-height: 90vh;
-	overflow : hidden;
+    margin-top: -30px;
+    /* Adjust to ensure seamless transition */
+    min-height: 90vh;
+    overflow: hidden;
 }
 
 .pixelCon {
-	position: absolute;
-	width: 100%;  height: 110%;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	overflow: hidden;
-  }
-  
-  .pixel {
-	background: #BB77BB;
-	width: 10%;
-	padding-top: 10%;
-	float: left;
-	opacity: 0.0;
-	animation: blink 5s infinite;
-  }
-  
-  @keyframes blink {
-	0%    {opacity: 0.0;}
-	25%   {opacity: 0.0;}
-	50%   {opacity: 0.5;}
-	100%  {opacity: 0.0;}
-  }
-  
+    position: absolute;
+    width: 100%;
+    height: 110%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.pixel {
+    background: #BB77BB;
+    width: 10%;
+    padding-top: 10%;
+    float: left;
+    opacity: 0.0;
+    animation: blink 5s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0.0;
+    }
+
+    25% {
+        opacity: 0.0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.0;
+    }
+}
+
 
 #contact-form {
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-	align-items: right;
-	z-index: 3;
+    align-items: right;
+    z-index: 3;
 }
 
 .contact-container {
@@ -257,7 +296,7 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-	z-index: 2;
+    z-index: 2;
 }
 
 /* #contact-form input, #contact-form textarea {
@@ -285,33 +324,43 @@ main {
 
 
 .contact-section {
-    position: relative; /* Required for the pseudo-element positioning */
+    position: relative;
+    /* Required for the pseudo-element positioning */
     background-color: #FDB;
     padding: 50px 0;
     text-align: center;
-    margin-top: -30px; /* Adjust to ensure seamless transition */
-	min-height: 95vh;
+    margin-top: -30px;
+    /* Adjust to ensure seamless transition */
+    min-height: 95vh;
 }
 
 ul.custom-icons {
-	list-style-type: none; /* Remove default bullets */
-	padding: 0;
-	margin-top: 15px; /* Adjusted for better spacing */
-	/* font size: 20px; */
-	font-size: 20px; /* Adjusted for better visibility */
-	/* text-align:left */
-	text-align: left;
+    list-style-type: none;
+    /* Remove default bullets */
+    padding: 0;
+    margin-top: 15px;
+    /* Adjusted for better spacing */
+    /* font size: 20px; */
+    font-size: 20px;
+    /* Adjusted for better visibility */
+    /* text-align:left */
+    text-align: left;
 
-	list-style-position: inside;
+    list-style-position: inside;
 }
+
 ul.custom-icons li {
-	padding-left: 3em; /* Space for the icon */
-	position: relative;
-	left: 0;
-	/* text-align:left; */
+    padding-left: 3em;
+    /* Space for the icon */
+    position: relative;
+    left: 0;
+    /* text-align:left; */
 }
+
 ul.custom-icons li i {
-	position: absolute;
-	left: 0; /* Align icon to the left */
-	top: 0; /* Align icon to the top */
+    position: absolute;
+    left: 0;
+    /* Align icon to the left */
+    top: 0;
+    /* Align icon to the top */
 }
