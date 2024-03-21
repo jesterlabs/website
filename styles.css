@@ -204,9 +204,11 @@ main {
 /* Contact Section Styles */
 
 
-.contact-section {
+.projects-section {
     position: relative; /* Required for the pseudo-element positioning */
     background-color: #BB77BB;
+	color: #FDB;
+
     padding: 50px 0;
     text-align: center;
     margin-top: -30px; /* Adjust to ensure seamless transition */
@@ -282,11 +284,34 @@ main {
 /* Project Section Styles */
 
 
-.projects-section {
+.contact-section {
     position: relative; /* Required for the pseudo-element positioning */
     background-color: #FDB;
     padding: 50px 0;
     text-align: center;
     margin-top: -30px; /* Adjust to ensure seamless transition */
 	min-height: 95vh;
+}
+
+ul.custom-icons {
+	list-style-type: none; /* Remove default bullets */
+	padding: 0;
+	margin-top: 15px; /* Adjusted for better spacing */
+	/* font size: 20px; */
+	font-size: 20px; /* Adjusted for better visibility */
+	/* text-align:left */
+	text-align: left;
+
+	list-style-position: inside;
+}
+ul.custom-icons li {
+	padding-left: 3em; /* Space for the icon */
+	position: relative;
+	left: 0;
+	/* text-align:left; */
+}
+ul.custom-icons li i {
+	position: absolute;
+	left: 0; /* Align icon to the left */
+	top: 0; /* Align icon to the top */
 }
