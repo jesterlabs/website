@@ -1,5 +1,24 @@
 {
   "dependencies": {
     "nes.css": "^2.3.0"
-  }
+  },
+  "name": "website",
+  "version": "1.0.0",
+  "main": "script.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesterlabs/website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesterlabs/website/issues"
+  },
+  "homepage": "https://github.com/jesterlabs/website#readme",
+  "description": ""
 }
