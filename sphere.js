@@ -9,7 +9,7 @@ const eggplant = '#636';
 const illo = new Zdog.Illustration({
   element: '.zdog-canvas',
   zoom: 20,
-  dragRotate: true,
+  dragRotate: false,
 });
 
 // ----- model ----- //
