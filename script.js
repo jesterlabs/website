@@ -1,4 +1,3 @@
-import "nes.css/css/nes.min.css";
 
 document.addEventListener('DOMContentLoaded', function () {
     var hamburger = document.querySelector('.hamburger');
