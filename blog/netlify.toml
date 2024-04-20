@@ -1,0 +1,6 @@
+HUGO_VERSION = "0.125.1"
+TZ = "America/New_York"
+
+[build]
+publish = "public"
+command = "hugo --gc --minify"
