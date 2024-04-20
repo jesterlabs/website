@@ -1,4 +1,5 @@
 baseURL = "https://blog.jesterlabs.ai"
+relativeURLs = true
 title = "All Posts"
 languageCode = "en"
 DefaultContentLanguage = "en"
