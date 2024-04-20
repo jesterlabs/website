@@ -1,4 +1,4 @@
-baseURL = "https://blog.jesterlabs.ai"
+baseURL = "/"
 title = "All Posts"
 languageCode = "en"
 DefaultContentLanguage = "en"
