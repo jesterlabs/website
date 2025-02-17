@@ -1,5 +1,0 @@
-[[redirects]]
-  from = "/games/rhyme-or-reason/*"
-  to = "https://rhyme-or-reason.vercel.app/:splat"
-  status = 200
-  force = true
